@@ -39,8 +39,8 @@ def make_guess(grid, ships, guess_x, guess_y):
 def get_player_input():
     while True:
         try:
-            x = int(input("Enter X coordinate (0-4): "))
-            y = int(input("Enter Y coordinate (0-4): "))
+            x = int(input("Enter X coordinate (0-4):\n "))
+            y = int(input("Enter Y coordinate (0-4):\n "))
             if 0 <= x < GRID_SIZE and 0 <= y < GRID_SIZE:
                 return x, y
             else:
