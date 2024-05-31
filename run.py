@@ -44,5 +44,8 @@ def get_player_input():
                 return x, y
             else:
                 print("Coordinates out of bounds. Try again.")
+        except ValueError:
+            print("Invalid input. Enter numbers only. Try again.")
+
 
 
