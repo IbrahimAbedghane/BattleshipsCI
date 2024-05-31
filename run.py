@@ -34,4 +34,15 @@ def make_guess(grid, ships, guess_x, guess_y):
         grid[guess_x][guess_y] = 'M'
         return False, "Miss!"
 
+# Function to get valid player input
+def get_player_input():
+    while True:
+        try:
+            x = int(input("Enter X coordinate (0-4): "))
+            y = int(input("Enter Y coordinate (0-4): "))
+            if 0 <= x < GRID_SIZE and 0 <= y < GRID_SIZE:
+                return x, y
+            else:
+                print("Coordinates out of bounds. Try again.")
+
 
