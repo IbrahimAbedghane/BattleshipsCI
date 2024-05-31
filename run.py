@@ -24,4 +24,14 @@ def place_ships(grid, count):
             ships.append((x, y))
     return ships
 
+# Function to handle player's guess
+def make_guess(grid, ships, guess_x, guess_y):
+    if (guess_x, guess_y) in ships:
+        grid[guess_x][guess_y] = 'H'
+        ships.remove((guess_x, guess_y))
+        return True, "Hit!"
+    else:
+        grid[guess_x][guess_y] = 'M'
+        return False, "Miss!"
+
 
