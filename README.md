@@ -18,3 +18,36 @@ Turn Limit: Users have a maximum of 10 turns to sink all the ships, adding a lev
     - Receive feedback on whether the players guess was a hit or miss
 3. Winning: If you sink all the ships within the allocated 10 turns you win the game! The game will display a congratulatory message to the player!
 4. Losing: If the player does not sink all the ships within the allocated 10 turns, the game will end and you lose. The game will then display a final grid showing the locations of the remaining ships.
+
+## Running the Game
+
+The battleships game is hosted on Heroku. To play the game, simply visit the following URL:
+
+[Battleships Game](https://battleshipsci-8f28fd6cca77.herokuapp.com/)
+
+follow the on-screen instructions to play the game.
+
+## Example
+
+```sh
+Welcome to Battleships!
+You have 10 turns to sink all the ships.
+
+~~~~~
+~~~~~
+~~~~~
+~~~~~
+~~~~~
+
+Enter X coordinate (0-4): 1
+Enter Y coordinate (0-4): 2
+
+~~~~~
+~~M~~
+~~~~~
+~~~~~
+~~~~~
+...
+```
+
+Enjoy playing!
