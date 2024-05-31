@@ -1,3 +1,8 @@
-# Your code goes here.
-# You can delete these comments, but do not change the name of this file
-# Write your code to expect a terminal of 80 characters wide and 24 rows high
+import random
+
+# Define Constants
+GRID_SIZE = 5
+
+# Function to create the game grid
+def create_grid(size):
+    return [['~' for _ in range(size)] for _ in range(size)]
