@@ -3,6 +3,7 @@ import random
 # Define Constants
 GRID_SIZE = 5
 SHIP_COUNT = 3
+MAX_TURNS = 10
 
 # Function to create the game grid
 def create_grid(size):
@@ -47,5 +48,33 @@ def get_player_input():
         except ValueError:
             print("Invalid input. Enter numbers only. Try again.")
 
+def main():
+    # Create the game grid and place ships
+    grid = create_grid(GRID_SIZE)
+    ships = place_ships(grid, SHIP_COUNT)
+    
+    print("Welcome to Battleships!")
+    print("You have 10 turns to sink all ships.")
+    
+    turns = 0
+    while turns < MAX_TURNS and ships:
+        print_grid(grid)
+        guess_x, guess_y = get_player_input()
+        hit, message = make_guess(grid, ships, guess_x, guess_y)
+        print(message)
+        if hit:
+            print(f"Ship sunk! {len(ships)} remaining.")
+        turns += 1
+    
+    if not ships:
+        print("Congratulations! You sank all the ships.")
+    else:
+        print("Game over. You've used all your turns.")
+    
+    print("Final grid:")
+    print_grid(grid)
+
+if __name__ == "__main__":
+    main()
 
 
